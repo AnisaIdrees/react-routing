@@ -4,6 +4,7 @@ import About from './About'
 import Contact from './Contact'
 import Header from './Header'
 import Footer from './Footer'
+import PagesNotFound from './PagesNotFound'
 
 const Main1 = () => {
   return (
@@ -13,6 +14,7 @@ const Main1 = () => {
 <About/>
 <Contact/>
 <Footer/>
+<PagesNotFound/>
 </>
   )
 }
