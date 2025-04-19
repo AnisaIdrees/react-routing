@@ -7,8 +7,11 @@ import {
 } from "react-router-dom";
 
 import Home from "./Home";
-import Blog from './Blog'
-
+import Blog from './Blog';
+import Shop from './Shop'
+import Contactus from "./Contactus";
+import Collection from './Collection';
+import PagesNotFound from "./PagesNotFound";
 import Layout from "./Layout";
 
 const Main1 = () => {
@@ -18,6 +21,10 @@ const Main1 = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path='/shop' element={<Shop/>}/>
+        <Route path="/contactUs" element={<Contactus/>}/>
+        <Route path="collection" element={<Collection/>}/>
+        <Route path="*"element={<PagesNotFound/>}/>
       </Route>
     )
   );

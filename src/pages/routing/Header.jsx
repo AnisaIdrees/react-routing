@@ -5,14 +5,17 @@ import { CiUser } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 
 const Header = () => {
+
 const logo={
   fontSize:'30px',
   marginLeft:'40px',
-  fontWeight:'900'
+  fontWeight:'900' 
+};
 
-  
-
-}  
+const iconStyle={
+  paddingLeft:'10px',
+  fontSize:'40px'
+}
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">
@@ -40,13 +43,13 @@ const logo={
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" href="#">
+                <NavLink className={({isActive})=>isActive ? 'text-info nav-link' : 'nav-link'} aria-current="page" to= "/shop">
                   Shop
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" href="#">
+                <NavLink className={({isActive})=> isActive ? 'text-info nav-link': 'nav-link'} aria-current="page" to='/collection'>
                   Collection
                 </NavLink>
               </li>
@@ -58,7 +61,7 @@ const logo={
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" href="#">
+                <NavLink className={({isActive})=>isActive ? 'text-info nav-link': 'nav-link'} aria-current="page" to="/contactUs">
                   Contact us
                 </NavLink>
               </li>
@@ -96,11 +99,11 @@ const logo={
               </li>
             </ul>
 
-            <form className="d-flex" role="search">
-              <CiSearch/>
-              <CiUser/>
-              <CiHeart />
-            </form>
+            <div className="d-flex ms-5 pe-4" role="search">
+              <CiSearch style={iconStyle}/>
+              <CiUser style={iconStyle}/>
+              <CiHeart style={iconStyle} />
+            </div>
           </div>
         </div>
       </nav>
