@@ -1,22 +1,31 @@
-import React from 'react'
-import Home from './Home'
-import About from './About'
-import Contact from './Contact'
-import Header from './Header'
-import Footer from './Footer'
-import PagesNotFound from './PagesNotFound'
+import React from "react";
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+
+import Home from "./Home";
+import Blog from './Blog'
+
+import Layout from "./Layout";
 
 const Main1 = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+      </Route>
+    )
+  );
   return (
-<>
-{/* <Header/> */}
-<Home/>
-{/* <About/>
-<Contact/>
-<Footer/>
-<PagesNotFound/> */}
-</>
-  )
-}
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
+};
 
-export default Main1
+export default Main1;

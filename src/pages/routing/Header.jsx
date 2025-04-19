@@ -1,65 +1,111 @@
-import React from 'react';
+import React from "react";
+import { Link , NavLink } from "react-router";
 import { CiSearch } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 
 const Header = () => {
+const logo={
+  fontSize:'30px',
+  marginLeft:'40px',
+  fontWeight:'900'
 
+  
+
+}  
   return (
-<>
-<nav className="navbar navbar-expand-lg bg-light">
-  <div className="container-fluid p-2">
-    <a className="navbar-brand" href="#">Flone</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ps-5">
+    <>
+      <nav className="navbar navbar-expand-lg bg-light">
+        <div className="container-fluid p-2">
+          <Link className="navbar-brand" href="#"style={logo} to="/">
+            Flone
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ps-5">
+              <li className="nav-item">
+                <NavLink className={({isActive})=> isActive ? 'text-info nav-link': 'nav-link'}aria-current="page" to='/home'>
+                  Home
+                </NavLink>
+              </li>
 
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
+              <li className="nav-item">
+                <NavLink className="nav-link active" aria-current="page" href="#">
+                  Shop
+                </NavLink>
+              </li>
 
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Shop</a>
-        </li>    
+              <li className="nav-item">
+                <NavLink className="nav-link active" aria-current="page" href="#">
+                  Collection
+                </NavLink>
+              </li>
 
-            <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Collection</a>
-        </li>
+              <li className="nav-item">
+                <NavLink className={({isActive})=> isActive ? 'text-info nav-link':'nav-link'} aria-current="page"to='/blog'>
+                  Blog
+                </NavLink>
+              </li>
 
+              <li className="nav-item">
+                <NavLink className="nav-link active" aria-current="page" href="#">
+                  Contact us
+                </NavLink>
+              </li>
 
-            <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Blog</a>
-        </li>
+              <li className="nav-item dropdown">
+                <NavLink
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pages
+                </NavLink>
+                <ul className="dropdown-menu">
+                  <li>
+                    <NavLink className="dropdown-item" href="#">
+                      Cart
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" href="#">
+                      Services
+                    </NavLink>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" href="#">
+                      Something else here
+                    </NavLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
 
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Contact us</a>
-        </li>
+            <form className="d-flex" role="search">
+              <CiSearch/>
+              <CiUser/>
+              <CiHeart />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+};
 
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Pages</a></li>
-            <li><a className="dropdown-item" href="#">Services</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-
-      </ul>
-      <form className="d-flex" role="search">
-      <CiSearch />
-      <CiUser />
-      <CiHeart />
-      </form>
-    </div>
-  </div>
-</nav>
-</>
-  )
-}
-
-export default Header
+export default Header;
