@@ -9,12 +9,12 @@ import PagesNotFound from './PagesNotFound'
 const Main1 = () => {
   return (
 <>
-<Header/>
+{/* <Header/> */}
 <Home/>
-<About/>
+{/* <About/>
 <Contact/>
 <Footer/>
-<PagesNotFound/>
+<PagesNotFound/> */}
 </>
   )
 }
