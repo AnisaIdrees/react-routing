@@ -100,9 +100,9 @@ const iconStyle={
             </ul>
 
             <div className="d-flex ms-5 pe-4" role="search">
-              <CiSearch style={iconStyle}/>
-              <CiUser style={iconStyle}/>
-              <CiHeart style={iconStyle} />
+              <CiSearch style={iconStyle} />
+              <NavLink className={({isActive})=>isActive ? "text-info nav-link" : 'nav-link'} to="/profile"><CiUser style={iconStyle} /></NavLink>
+              <NavLink className={({isActive})=>isActive ? "text-info nav-link" : 'nav-link'} to="/whishlist"><CiHeart style={iconStyle} /></NavLink>
             </div>
           </div>
         </div>

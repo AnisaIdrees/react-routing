@@ -4,7 +4,9 @@ import Header from './Header'
 const Home = () => {
   return (
 <>
-{/* <Header/> */}
+<div className="container-xxl hero-sec-home">
+hwiugfkf
+</div>
 </>
   )
 }

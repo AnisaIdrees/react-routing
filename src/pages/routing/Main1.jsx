@@ -30,7 +30,7 @@ const Main1 = () => {
   );
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} fallbackElement={<h1> loading ....</h1>}/>
     </>
   );
 };
