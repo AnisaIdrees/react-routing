@@ -16,6 +16,7 @@ const iconStyle={
   paddingLeft:'10px',
   fontSize:'40px'
 }
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">
@@ -37,72 +38,42 @@ const iconStyle={
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ps-5">
               <li className="nav-item">
-                <NavLink className={({isActive})=> isActive ? 'text-info nav-link': 'nav-link'}aria-current="page" to='/home'>
+                <NavLink className={({isActive})=> isActive ? 'active nav-link': 'nav-link'}aria-current="page" to='/home'>
                   Home
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className={({isActive})=>isActive ? 'text-info nav-link' : 'nav-link'} aria-current="page" to= "/shop">
+                <NavLink className={({isActive})=>isActive ? 'active nav-link' : 'nav-link'} aria-current="page" to= "/shop">
                   Shop
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className={({isActive})=> isActive ? 'text-info nav-link': 'nav-link'} aria-current="page" to='/collection'>
+                <NavLink className={({isActive})=> isActive ? 'active nav-link': 'nav-link'} aria-current="page" to='/collection'>
                   Collection
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className={({isActive})=> isActive ? 'text-info nav-link':'nav-link'} aria-current="page"to='/blog'>
+                <NavLink className={({isActive})=> isActive ? 'active nav-link':'nav-link'} aria-current="page"to='/blog'>
                   Blog
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className={({isActive})=>isActive ? 'text-info nav-link': 'nav-link'} aria-current="page" to="/contactUs">
+                <NavLink className={({isActive})=>isActive ? 'active nav-link': 'nav-link'} aria-current="page" to="/contactUs">
                   Contact us
                 </NavLink>
               </li>
 
-              <li className="nav-item dropdown">
-                <NavLink
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Pages
-                </NavLink>
-                <ul className="dropdown-menu">
-                  <li>
-                    <NavLink className="dropdown-item" href="#">
-                      Cart
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="dropdown-item" href="#">
-                      Services
-                    </NavLink>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <NavLink className="dropdown-item" href="#">
-                      Something else here
-                    </NavLink>
-                  </li>
-                </ul>
-              </li>
+          
             </ul>
 
             <div className="d-flex ms-5 pe-4" role="search">
               <CiSearch style={iconStyle} />
-              <NavLink className={({isActive})=>isActive ? "text-info nav-link" : 'nav-link'} to="/profile"><CiUser style={iconStyle} /></NavLink>
-              <NavLink className={({isActive})=>isActive ? "text-info nav-link" : 'nav-link'} to="/whishlist"><CiHeart style={iconStyle} /></NavLink>
+              <NavLink className={({isActive})=>isActive ? "active nav-link" : 'nav-link'} to="/profile"><CiUser style={iconStyle} /></NavLink>
+              <NavLink className={({isActive})=>isActive ? "active nav-link" : 'nav-link'} to="/whishlist"><CiHeart style={iconStyle} /></NavLink>
             </div>
           </div>
         </div>
