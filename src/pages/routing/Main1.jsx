@@ -13,6 +13,7 @@ import Contactus from "./Contactus";
 import Collection from './Collection';
 import PagesNotFound from "./PagesNotFound";
 import Layout from "./Layout";
+import DetailPage from "./DetailPage";
 
 const Main1 = () => {
   const router = createBrowserRouter(
@@ -25,6 +26,7 @@ const Main1 = () => {
         <Route path="/contactUs" element={<Contactus/>}/>
         <Route path="collection" element={<Collection/>}/>
         <Route path="*"element={<PagesNotFound/>}/>
+        <Route path='/shop/:id' element={<DetailPage/>} />
       </Route>
     )
   );

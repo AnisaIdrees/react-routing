@@ -31,7 +31,7 @@ const Card = () => {
   }, []);
 
   return (
-    <div className="container-fluid d-flex flex-wrap gap-4 justify-content-center align-items-center">
+    <div className="container-fluid d-flex flex-wrap gap-4 justify-content-center align-items-center pb-5">
       {Array.isArray(products) && products.length > 0 ? (
         products.map((product, index) => (
         
@@ -42,7 +42,7 @@ const Card = () => {
             <div className="card-body text-center mx-auto">
                 <div className='cvp'>
                     <h5 className="card-title font-weight-bold">{product?.title}</h5>
-                    <p className="card-text">{product?.price}</p>
+                    <p className="card-text">RS / {product?.price}</p>
                     <Button text='view detail'/>
                 </div>
             </div>
