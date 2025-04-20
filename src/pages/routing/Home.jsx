@@ -29,7 +29,8 @@ const Home = () => {
 
       <div className="home-section2 container-xxl">
         <h2 className="text-center mt-5 fw-bold">___ DAILY DEALS ! ___</h2>
-        <Card />
+        
+        <Card/>
       </div>
     </>
   );
