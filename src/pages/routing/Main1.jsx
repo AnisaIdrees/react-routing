@@ -21,12 +21,12 @@ const Main1 = () => {
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blogggf" element={<Blog />} />
         <Route path='/shop' element={<Shop/>}/>
         <Route path="/contactUs" element={<Contactus/>}/>
-        <Route path="collection" element={<Collection/>}/>
+        <Route path="collegjf" element={<Collection/>}/>
         <Route path="*"element={<PagesNotFound/>}/>
-        <Route path='/shop/:id' element={<DetailPage/>} />
+        <Route path='/collection/:id' element={<DetailPage/>} />
       </Route>
     )
   );

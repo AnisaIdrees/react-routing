@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
+import { NavLink } from "react-router-dom";
 
 const Card = () => {
   const [products, setProducts] = useState([]);
@@ -35,7 +36,7 @@ const Card = () => {
       {Array.isArray(products) && products.length > 0 ? (
         products.map((product, index) => (
         
-        <div className="card  col-md-3 col-10 mt-5"key={index}>
+        <div className="card  col-md-3 col-10 mt-5"key={index+product.id}>
             <img className='mx-auto img-thumbnail'
                 src={product.images[0]}
                 />
@@ -43,7 +44,12 @@ const Card = () => {
                 <div className='cvp'>
                     <h5 className="card-title font-weight-bold">{product?.title}</h5>
                     <p className="card-text">RS / {product?.price}</p>
+
+                    <NavLink to={`/collection/${product.id}`}>
+
                     <Button text='view detail'/>
+
+                    </NavLink>
                 </div>
             </div>
         

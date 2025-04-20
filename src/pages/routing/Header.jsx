@@ -45,10 +45,12 @@ const iconStyle={
 
               <li className="nav-item">
                 <NavLink className={({isActive})=>isActive ? 'active nav-link' : 'nav-link'} aria-current="page" to= "/shop">
-                  Shop
+                  About us
                 </NavLink>
               </li>
-
+              <NavLink className={({isActive})=>isActive ? 'active nav-link': 'nav-link'} aria-current="page" to="/contactUs">
+                  Contact us
+                </NavLink>
               <li className="nav-item">
                 <NavLink className={({isActive})=> isActive ? 'active nav-link': 'nav-link'} aria-current="page" to='/collection'>
                   Collection
@@ -61,11 +63,7 @@ const iconStyle={
                 </NavLink>
               </li>
 
-              <li className="nav-item">
-                <NavLink className={({isActive})=>isActive ? 'active nav-link': 'nav-link'} aria-current="page" to="/contactUs">
-                  Contact us
-                </NavLink>
-              </li>
+           
 
           
             </ul>
