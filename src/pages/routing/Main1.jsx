@@ -23,7 +23,7 @@ const Main1 = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/blogggf" element={<Blog />} />
         <Route path='/shop' element={<Shop/>}/>
-        <Route path="/contactUs" element={<Contactus/>}/>
+        <Route path="/contactUsg" element={<Contactus/>}/>
         <Route path="collegjf" element={<Collection/>}/>
         <Route path="*"element={<PagesNotFound/>}/>
         <Route path='/collection/:id' element={<DetailPage/>} />

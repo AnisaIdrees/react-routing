@@ -54,6 +54,62 @@
   font-size: 80px !important;
   font-weight: 500 !important;
 }
+
+
+/* Slide-in animation */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade-in for deals */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation classes */
+.hero-sec-home .text-box {
+  animation: slideInLeft 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+.hero-sec-home .image-box {
+  animation: slideInRight 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.home-section2 {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
 /* From Uiverse.io by JaydipPrajapati1910 */ 
 .Shopbutton {
   --color: rgba(0, 0, 0, 0.967);
@@ -372,3 +428,109 @@
     justify-content: space-between;
    }
  }
+ /* ///////////// card animations//////////////////// */
+ /* Animation Keyframes */
+@keyframes fadeInUpCard {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base Style for Cards */
+.card {
+  opacity: 0;
+  animation: fadeInUpCard 0.7s ease forwards;
+}
+
+/* Staggered Delays for 10 Cards */
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.card:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.card:nth-child(6) {
+  animation-delay: 0.7s;
+}
+.card:nth-child(7) {
+  animation-delay: 0.8s;
+}
+.card:nth-child(8) {
+  animation-delay: 0.9s;
+}
+.card:nth-child(9) {
+  animation-delay: 1s;
+}
+.card:nth-child(10) {
+  animation-delay: 1.5s;
+}
+/* about us */
+.about-hero {
+  position: relative;
+  height: 80vh;
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20220522/pngtree-ecommerce-banner-planning-segmentation-selection-image_1375247.jpg); /* ✅ your image path here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 🔸 blackish overlay */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.fade-in-top {
+  animation: fadeInTop 1s ease-in-out;
+}
+.fade-in-bottom {
+  animation: fadeInBottom 1.2s ease-in-out;
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
